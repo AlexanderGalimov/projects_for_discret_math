@@ -11,7 +11,6 @@ def search_single_num_for_consistent_search(data, curr_num):
     for i in range(len(data)):
         count_of_iterations += 1
         if curr_num == data[i]:
-            print(count_of_iterations)
             return count_of_iterations
 
 
@@ -45,8 +44,9 @@ def search_single_num_for_binary_search(sorted_data, value):
 def interpolation_search(sorted_data):
     result_sum = 0
     for i in range(len(sorted_data)):
-        result_sum += search_single_num_for_binary_search(sorted_data, sorted_data[i])
+        result_sum += search_single_num_for_interpolation_search(sorted_data, sorted_data[i])
     average_sum = result_sum / len(sorted_data)
+    print(result_sum)
     return average_sum
 
 

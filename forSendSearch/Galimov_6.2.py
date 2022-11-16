@@ -45,7 +45,7 @@ def search_single_num_for_binary_search(sorted_data, value):
 def interpolation_search(sorted_data):
     result_sum = 0
     for i in range(len(sorted_data)):
-        result_sum += search_single_num_for_binary_search(sorted_data, sorted_data[i])
+        result_sum += search_single_num_for_interpolation_search(sorted_data, sorted_data[i])
     average_sum = result_sum / len(sorted_data)
     return average_sum
 

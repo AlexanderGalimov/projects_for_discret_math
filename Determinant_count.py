@@ -7,7 +7,7 @@ def cut_matrix(matrix, index):
     for i in range(len(matrix)):
         if a == len(matrix) - 1:
             break
-        for j in range(len(matrix[0])):
+        for j in range(1, len(matrix[0])):
             if i != index:
                 result[a][j - 1] = matrix[i][j]
 
@@ -24,7 +24,7 @@ def determinant_count(matrix):
 
     for i in range(len(matrix)):
         if len(matrix) > 2:
-            result_sum = result_sum + matrix[i][0] * int(math.pow(-1, i + 2)) * determinant_count(cut_matrix(matrix, i))
+            result_sum = result_sum + matrix[i][0] * int(math.pow(-1, i)) * determinant_count(cut_matrix(matrix, i))
         else:
             result_sum = matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
 

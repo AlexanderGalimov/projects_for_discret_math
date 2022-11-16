@@ -16,10 +16,11 @@ def read_one_dimensional_list(file):
     return data
 
 
-def write_one_dimensional_matrix_to_file(data, file):
+def write_one_dimensional_matrix_to_file(data, count, file):
     f = open(file, 'w')
     for i in range(len(data)):
         f.write(str(data[i]) + " ")
+    f.write("\n" + str(count))
 
 
 def write_two_dimensional_matrix_to_file(data, file):
